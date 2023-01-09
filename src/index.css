@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+  --clr-primary: #3b82f6;
+  --clr-secondary: #64748b;
+  --clr-white: #fff;
+  --clr-dark: hsl(0, 0%, 0%);
+  --clr-dark-shadow: hsla(0, 0%, 0%, 0.5);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+button {
+  background-color: none;
+  outline: none;
+  border: none;
+}
+.container {
+  display: grid;
+  grid-template-columns:
+    [container-start] repeat(12, minmax(min-content, 12.8rem))
+    [container-end];
+  justify-content: center;
+  gap: 1rem;
+}
+.layout {
+  grid-column: container-start/container-end;
+}
+
+.tours-heading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.tours-heading h6 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--clr-primary);
+}
+.tours-heading h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--clr-secondary);
+}
+.tours-heading p {
+  font-size: 1.6rem;
+  color: var(--clr-secondary);
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+.tours-heading span {
+  height: 3rem;
+  display: block;
+}
+.tours {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.tour {
+  max-width: 30rem;
+  height: calc(100vh - 15rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 1rem;
+  text-align: center;
+  gap: 1rem;
+  border: 1px solid var(--clr-dark-shadow);
+  box-shadow: -1px 1px 10px 0px rgba(247, 247, 247, 1);
+  background-color: var(--clr-white);
+}
+.tour-text {
+  flex-basis: 50%;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+.tour-img-container {
+  width: 30rem;
+  height: 28rem;
+}
+.tour-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.tour-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tour-info-name {
+  font-size: 1.6rem;
+  text-align: left;
+  vertical-align: middle;
+}
+.tour-info-price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: 3px underline var(--clr-primary);
+}
+.tour-text-details {
+  font-size: 1.3rem;
+  line-height: 2.6rem;
+  margin-top: 2rem;
+  color: var(--clr-secondary);
+}
+
+.breakword {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+
+  color: var(--clr-primary);
+  border-bottom: 1px solid var(--clr-primary);
+}
+
+.btn-interest {
+  display: inline-block;
+  align-self: center;
+  border-bottom: 1px solid var(--clr-primary);
+
+  background-color: var(--clr-primary);
+  padding: 0.9rem 2.1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--clr-white);
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.toursleft {
+  display: grid;
+  place-content: center;
+  gap: 2rem;
+}
+.toursleft h2 {
+  text-align: center;
+  color: var(--clr-secondary);
+  font-size: 3.2rem;
+  line-height: 5rem;
+}
+.getback {
+  padding: 1rem 3rem;
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 700;
+}
+/* Loading */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25rem;
+}
+.progress-6 {
+  width: 120px;
+  height: 22px;
+  border-radius: 20px;
+  color: #514b82;
+  border: 2px solid;
+  position: relative;
+}
+.progress-6::before {
+  content: "";
+  position: absolute;
+  margin: 2px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: currentColor;
+  animation: p6 2s infinite;
+}
+@keyframes p6 {
+  100% {
+    inset: 0;
+  }
+}
